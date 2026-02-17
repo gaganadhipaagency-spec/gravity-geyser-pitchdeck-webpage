@@ -14,7 +14,7 @@ export default function OEMLicensing() {
     return (
         <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="p-12 lg:p-16 bg-blue-600 rounded-[40px] text-white overflow-hidden relative">
+                <div className="p-6 md:p-12 lg:p-16 bg-blue-600 rounded-[40px] text-white overflow-hidden relative">
                     <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
 
                         <div>

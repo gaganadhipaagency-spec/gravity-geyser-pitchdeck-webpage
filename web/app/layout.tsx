@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Gravity Geyser - Licensed Gravity-Based Water Heating Architecture",
   description: "Official engineering platform for Gravity Geyser technology.",
+  icons: {
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-white text-slate-900">
+      <body className="antialiased bg-white text-slate-900 text-base md:text-lg">
         {children}
       </body>
     </html>

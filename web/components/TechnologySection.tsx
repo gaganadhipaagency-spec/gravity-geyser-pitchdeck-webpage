@@ -6,31 +6,41 @@ import { Beaker, ShieldCheck, Zap, Star, Activity, Thermometer, Droplets, Cpu, L
 const features = [
     {
         title: "Selective Volume Heating",
-        description: "User-configurable heating zones allow activation of 10L, 18L, or 25L segments independently.",
+        description: "User-configurable heating zones allow activation of 10L, 15L, 20L, or 25L segments independently.",
         footer: "Variable Resistor Array",
         icon: Layers,
         renderDiagram: () => (
-            <div className="relative w-full h-[260px] flex items-end justify-center gap-4 px-10 pb-6">
-                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-400 z-10">
+            <div className="relative w-full h-[260px] flex items-end justify-center gap-3 px-6 pb-6 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]">
+                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-600 z-10">
                     FIG 2.1: VOLUMETRIC CONTROL
                 </div>
                 <div className="flex-1 flex flex-col items-center">
-                    <span className="text-[11px] font-bold text-blue-600 font-mono mb-2">10L</span>
+                    <span className="text-[11px] font-bold text-blue-500 font-mono mb-2">10L</span>
                     <motion.div
                         initial={{ height: 0 }}
-                        whileInView={{ height: "80px" }}
+                        whileInView={{ height: "60px" }}
                         viewport={{ once: true }}
-                        className="w-full bg-[#BFDBFE] rounded-t-sm"
+                        className="w-full bg-[#DBEAFE] rounded-t-sm"
                     />
                 </div>
                 <div className="flex-1 flex flex-col items-center">
-                    <span className="text-[11px] font-bold text-blue-700 font-mono mb-2">18L</span>
+                    <span className="text-[11px] font-bold text-blue-600 font-mono mb-2">15L</span>
                     <motion.div
                         initial={{ height: 0 }}
-                        whileInView={{ height: "140px" }}
+                        whileInView={{ height: "100px" }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="w-full bg-[#60A5FA] rounded-t-sm"
+                    />
+                </div>
+                <div className="flex-1 flex flex-col items-center">
+                    <span className="text-[11px] font-bold text-blue-700 font-mono mb-2">20L</span>
+                    <motion.div
+                        initial={{ height: 0 }}
+                        whileInView={{ height: "150px" }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="w-full bg-[#2563EB] rounded-t-sm"
                     />
                 </div>
                 <div className="flex-1 flex flex-col items-center">
@@ -39,8 +49,8 @@ const features = [
                         initial={{ height: 0 }}
                         whileInView={{ height: "200px" }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="w-full bg-[#2563EB] rounded-t-sm"
+                        transition={{ delay: 0.3 }}
+                        className="w-full bg-[#1E40AF] rounded-t-sm"
                     />
                 </div>
             </div>
@@ -52,8 +62,8 @@ const features = [
         footer: "Hydro-Dynamic Separation",
         icon: Droplets,
         renderDiagram: () => (
-            <div className="relative w-full h-[260px] flex items-center justify-center">
-                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-400 z-10">
+            <div className="relative w-full h-[260px] flex items-center justify-center bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]">
+                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-600 z-10">
                     FIG 2.2: THERMAL BARRIER
                 </div>
                 <div className="relative w-36 h-36">
@@ -67,10 +77,10 @@ const features = [
                         />
                     </div>
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-blue-50 border border-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-[10px]">❄️</span>
+                        <span className="text-xl leading-none">❄️</span>
                     </div>
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-6 h-6 bg-red-50 border border-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-[10px]">🔥</span>
+                        <span className="text-xl leading-none">🔥</span>
                     </div>
                 </div>
             </div>
@@ -83,7 +93,7 @@ const features = [
         icon: Shield,
         renderDiagram: () => (
             <div className="relative w-full h-[260px] flex items-center justify-center">
-                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-400 z-10">
+                <div className="absolute top-3 left-6 px-2 py-0.5 bg-white/80 border border-slate-100 rounded text-[9px] font-mono text-slate-600 z-10">
                     FIG 2.3: MATERIAL COMPOSITION
                 </div>
                 <div className="w-full h-full bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] flex items-center justify-center">
@@ -113,7 +123,7 @@ export default function TechnologySection() {
         {
             label: "WORKING PRESSURE",
             conventional: "8 Bar (High Risk)",
-            gravity: "0 Bar (Atmospheric)",
+            gravity: "Atmospheric Pressure",
         },
         {
             label: "DISCHARGE MECHANISM",
@@ -122,7 +132,7 @@ export default function TechnologySection() {
         },
         {
             label: "DEAD VOLUME",
-            conventional: "~15% (Sediment Trap)",
+            conventional: "15-30% (Sediment Trap)",
             gravity: "0% (Total Drain)",
         },
         {
@@ -138,8 +148,8 @@ export default function TechnologySection() {
     ];
 
     return (
-        <section id="technology" className="py-20 bg-[#F8FAFC] border-y border-slate-200 min-h-screen flex flex-col justify-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-32">
+        <section id="technology" className="py-12 md:py-20 bg-[#F8FAFC] border-y border-slate-200 min-h-screen flex flex-col justify-center overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-16 md:space-y-32">
                 {/* --- BLOCK 1: STRUCTURAL REDESIGN --- */}
                 <div>
                     {/* Header Section - Unified Left Alignment */}
@@ -196,7 +206,7 @@ export default function TechnologySection() {
                         className="bg-white rounded-[24px] border border-slate-300 overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row"
                     >
                         {/* Left Panel */}
-                        <div className="p-10 lg:w-[32%] flex flex-col justify-center items-start border-b lg:border-b-0 lg:border-r border-slate-200 relative bg-slate-50/50">
+                        <div className="p-6 md:p-10 lg:w-[32%] flex flex-col justify-center items-start border-b lg:border-b-0 lg:border-r border-slate-200 relative bg-slate-50/50">
                             <div className="relative z-10 w-full">
                                 <h4 className="text-[20px] font-bold text-[#0F172A] mb-3">Technical Parameters</h4>
                                 <p className="text-[#64748B] text-[14px] leading-relaxed mb-8 max-w-[280px]">
@@ -215,10 +225,10 @@ export default function TechnologySection() {
                         <div className="lg:w-[68%] flex flex-col">
                             {/* Header Row */}
                             <div className="grid grid-cols-2 border-b border-slate-200">
-                                <div className="py-5 px-8">
-                                    <h5 className="text-[12px] font-bold text-[#64748B] uppercase tracking-wider">Conventional Pressurized</h5>
+                                <div className="py-4 px-4 md:py-5 md:px-8">
+                                    <h5 className="text-[10px] md:text-[12px] font-bold text-[#64748B] uppercase tracking-wider">Conventional Pressurized</h5>
                                 </div>
-                                <div className="py-5 px-8 bg-[#ECF5FF] relative">
+                                <div className="py-4 px-4 md:py-5 md:px-8 bg-[#ECF5FF] relative">
                                     <h5 className="text-[12px] font-bold text-[#2563EB] uppercase tracking-wider">Gravity Geyser</h5>
                                     <div className="absolute top-0 right-0 bg-[#2563EB] text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-[8px] uppercase tracking-tight">
                                         New Standard
@@ -230,15 +240,15 @@ export default function TechnologySection() {
                             <div className="divide-y divide-slate-200 flex-1">
                                 {specs.map((spec, index) => (
                                     <div key={index} className="grid grid-cols-2 group hover:bg-slate-50/30 transition-colors">
-                                        <div className="py-5 px-8 border-r border-slate-200">
-                                            <span className="block text-[11px] text-[#94A3B8] font-mono uppercase tracking-widest mb-1.5">
+                                        <div className="py-4 px-4 md:py-5 md:px-8 border-r border-slate-200">
+                                            <span className="block text-[9px] md:text-[11px] text-[#94A3B8] font-mono uppercase tracking-widest mb-1.5">
                                                 {spec.label}
                                             </span>
-                                            <span className="text-[15px] font-bold text-[#334155] font-mono leading-tight group-hover:text-[#0F172A] transition-colors">
+                                            <span className="text-[13px] md:text-[15px] font-bold text-[#334155] font-mono leading-tight group-hover:text-[#0F172A] transition-colors">
                                                 {spec.conventional}
                                             </span>
                                         </div>
-                                        <div className="py-5 px-8 bg-[#F8FBFF] group-hover:bg-[#F0F7FF] transition-colors">
+                                        <div className="py-4 px-4 md:py-5 md:px-8 bg-[#F8FBFF] group-hover:bg-[#F0F7FF] transition-colors">
                                             <span className="block text-[11px] text-[#94A3B8] font-mono uppercase tracking-widest mb-1.5">
                                                 {spec.label}
                                             </span>
@@ -340,7 +350,7 @@ export default function TechnologySection() {
                             transition={{ delay: 0.1 }}
                             className="text-3xl lg:text-[42px] font-extrabold text-[#0F172A] leading-tight tracking-tight mb-4"
                         >
-                            IoT/AI Logic Controller
+                            IoT Logic Controller
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
@@ -362,7 +372,7 @@ export default function TechnologySection() {
                         className="bg-white rounded-[24px] border border-slate-300 overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row h-full min-h-[500px]"
                     >
                         {/* Left Panel: Content */}
-                        <div className="p-10 lg:w-[45%] flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-200 bg-slate-50/30">
+                        <div className="p-6 md:p-10 lg:w-[45%] flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-200 bg-slate-50/30">
 
                             {/* Feature Points */}
                             <div className="space-y-4">
@@ -383,7 +393,7 @@ export default function TechnologySection() {
                                             IF water_level &lt; min_threshold THEN disable(element)
                                         </p>
                                         <p className="text-[#475569] text-[13px] leading-relaxed">
-                                            Prevents dry run conditions through capacitive water-level sensing.
+                                            Prevents dry run conditions through resistive water-level sensing.
                                         </p>
                                     </div>
                                 </motion.div>
@@ -400,12 +410,12 @@ export default function TechnologySection() {
                                         <Zap className="w-5 h-5 text-blue-600" />
                                     </div>
                                     <div>
-                                        <h4 className="text-[15px] font-bold text-[#0F172A] mb-1">47% Electricity Reduction</h4>
+                                        <h4 className="text-[15px] font-bold text-[#0F172A] mb-1">~50% Electricity Reduction</h4>
                                         <p className="text-[11px] font-mono text-[#94A3B8] mb-1.5 bg-slate-50 px-2 py-0.5 rounded w-fit">
                                             hospital_comparison_study: measured
                                         </p>
                                         <p className="text-[#475569] text-[13px] leading-relaxed">
-                                            Reduces daily electricity consumption up to 47% (hospital measured).
+                                            Reduces daily electricity consumption up to ~50% (hospital measured).
                                         </p>
                                     </div>
                                 </motion.div>
@@ -467,7 +477,7 @@ export default function TechnologySection() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: 0.5 }}
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] bg-white rounded-2xl border border-slate-200 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.12)] overflow-hidden z-20"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[340px] bg-white rounded-2xl border border-slate-200 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.12)] overflow-hidden z-20"
                             >
                                 <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-white">
                                     <span className="text-[12px] font-bold text-[#0F172A] uppercase tracking-wider">System Status</span>

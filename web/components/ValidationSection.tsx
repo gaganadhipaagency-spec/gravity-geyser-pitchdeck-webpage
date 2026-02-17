@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Wallet, Activity, ArrowDownToLine, Zap } from "lucide-react";
+import { Building2, Wallet, Activity, ArrowRight, Zap } from "lucide-react";
 
 export default function ValidationSection() {
     return (
-        <section id="validation" className="h-screen bg-slate-50 border-y border-slate-200 snap-start flex flex-col pt-24 pb-8 overflow-hidden">
+        <section id="validation" className="min-h-screen lg:h-screen bg-slate-50 border-y border-slate-200 snap-start flex flex-col pt-24 pb-8 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col">
                 {/* Header Section - Compact */}
                 <div className="mb-8 flex-none">
@@ -85,8 +85,8 @@ export default function ValidationSection() {
                                         <span className="font-mono font-bold text-slate-900">02 Units</span>
                                     </li>
                                     <li className="flex items-center justify-between border-t border-slate-200/50 pt-3">
-                                        <span className="text-slate-600 text-sm font-medium">Hospitals</span>
-                                        <span className="font-mono font-bold text-slate-900">05 Units</span>
+                                        <span className="text-slate-600 text-sm font-medium">Institutional</span>
+                                        <span className="font-mono font-bold text-slate-900">02 Units</span>
                                     </li>
                                 </ul>
                             </div>
@@ -114,7 +114,7 @@ export default function ValidationSection() {
                                     </span>
                                 </div>
 
-                                <h3 className="text-3xl font-bold mb-2 tracking-tight">47% Less Energy</h3>
+                                <h3 className="text-3xl font-bold mb-2 tracking-tight">~50% Less Energy</h3>
                                 <p className="text-blue-100/80 mb-6 max-w-sm text-sm leading-relaxed">
                                     Measured reduction in electricity consumption compared to conventional storage geysers.
                                 </p>
@@ -122,7 +122,7 @@ export default function ValidationSection() {
                                 <div className="flex gap-3">
                                     <div className="bg-blue-800/50 rounded-xl p-4 border border-blue-700 backdrop-blur-sm flex-1">
                                         <p className="text-[10px] text-blue-200 font-mono mb-1 uppercase tracking-wider">Savings</p>
-                                        <p className="text-2xl font-bold">47%</p>
+                                        <p className="text-2xl font-bold">~50%</p>
                                     </div>
                                     <div className="bg-blue-800/50 rounded-xl p-4 border border-blue-700 backdrop-blur-sm flex-1">
                                         <p className="text-[10px] text-blue-200 font-mono mb-1 uppercase tracking-wider">Duration</p>
@@ -150,10 +150,10 @@ export default function ValidationSection() {
                                 </div>
                             </div>
 
-                            <button className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium py-4 rounded-xl transition-all group active:scale-[0.98]">
-                                <ArrowDownToLine className="w-4 h-4" />
-                                Download Certification Summary
-                            </button>
+                            <a href="#contact" className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium py-4 rounded-xl transition-all group active:scale-[0.98]">
+                                Request Certification Summary
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </a>
                         </motion.div>
                     </div>
                 </div>

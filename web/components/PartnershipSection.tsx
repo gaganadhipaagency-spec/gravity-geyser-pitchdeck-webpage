@@ -43,7 +43,7 @@ export default function PartnershipSection() {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.3 }}
                                 >
-                                    While energy costs and safety expectations have surged, the fundamental architecture of storage geysers has remained <span className="text-slate-900 font-bold italic">stagnant for decades</span>. This creates a unique vacuum for differentiated engineering.
+                                    While energy costs and safety expectations have surged, the fundamental architecture of storage geysers has remained <span className="text-slate-900 font-bold italic">stagnant for 130 years</span>. This creates a unique vacuum for differentiated engineering.
                                 </motion.p>
                                 <motion.p
                                     initial={{ opacity: 0, y: 10 }}
@@ -75,7 +75,7 @@ export default function PartnershipSection() {
                                 </div>
 
                                 <div className="mb-12">
-                                    <span className="text-7xl md:text-8xl font-bold text-slate-900 tracking-tighter block mb-2">₹10K</span>
+                                    <span className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-900 tracking-tighter block mb-2">₹10K</span>
                                     <span className="text-2xl font-bold text-slate-400 font-mono tracking-tight uppercase">Crores Valuation</span>
                                 </div>
 
@@ -141,11 +141,11 @@ export default function PartnershipSection() {
                                 <p className="text-slate-400 text-sm mb-8 leading-relaxed">
                                     Access confidential technical datasets, manufacturing workflows, and licensing terms.
                                 </p>
-                                <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group">
+                                <a href="#contact" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group">
                                     <FileText className="w-5 h-5" />
                                     Request Technical Brief
                                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </button>
+                                </a>
                                 <p className="text-[10px] text-slate-500 mt-4 text-center font-mono uppercase tracking-widest">
                                     Subject to NDA Approval
                                 </p>

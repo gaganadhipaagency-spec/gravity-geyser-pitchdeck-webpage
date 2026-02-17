@@ -19,7 +19,7 @@ export default function Introduction() {
                         Redefining Thermal Storage Architecture
                     </h2>
                     <p className="text-xl text-slate-600 leading-relaxed">
-                        <span className="font-semibold text-slate-900">HG SOL TEC Pvt. Ltd.</span> has developed a fundamentally redesigned storage water heater architecture that reduces electricity consumption through selective volume heating and gravity-based discharge.
+                        <span className="font-semibold text-slate-900">HG SOL TEC Pvt. Ltd.</span> has invented a fundamentally redesigned storage water heater architecture that reduces electricity consumption by ~50% through selective volume heating, cold water isolation, and gravity-based discharge.
                     </p>
                     <p className="text-lg text-slate-500 leading-relaxed mt-6">
                         The system is protected by three granted Indian patents (valid till 2037) and validated through government laboratory testing.

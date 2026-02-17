@@ -27,7 +27,7 @@ const features = [
         value: "50%",
         label: "ENERGY SAVINGS",
         title: "Selective Volume Heating",
-        description: "Proprietary thermal stratification allows users to heat only the required volume of water rather than the entire tank mass. Drastically reduces energy waste during partial usage scenarios.",
+        description: "Proprietary thermal stratification allows users to heat only the required volume of water rather than the entire tank mass, significantly reducing heating time. Drastically reduces energy waste during partial usage scenarios.",
         footerLabel: "BEE Rating:",
         footerValue: "5-STAR"
     },
@@ -35,7 +35,7 @@ const features = [
 
 export default function EngineeringTruth() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-16 md:py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="mb-16">

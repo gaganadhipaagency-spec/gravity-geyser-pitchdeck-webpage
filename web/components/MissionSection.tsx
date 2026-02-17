@@ -30,7 +30,7 @@ export default function MissionSection() {
                         <div className="pt-8 border-t border-slate-100">
                             <div className="flex items-center gap-3 mb-6">
                                 <ShieldCheck className="w-5 h-5 text-blue-600" />
-                                <span className="text-sm font-semibold text-slate-900 tracking-wide">REQUESTED INTELLECTUAL PROPERTY</span>
+                                <span className="text-sm font-semibold text-slate-900 tracking-wide">GRANTED INTELLECTUAL PROPERTY</span>
                             </div>
                             <div className="flex flex-wrap gap-3">
                                 {patents.map((patent) => (
@@ -55,10 +55,10 @@ export default function MissionSection() {
                         className="lg:pt-12"
                     >
                         <p className="text-2xl md:text-3xl text-slate-900 leading-tight font-medium mb-8">
-                            HG SOLTEC Pvt. Ltd. has developed a fundamentally redesigned storage water heater architecture that reduces electricity consumption through selective volume heating and gravity-based discharge.
+                            HG SOLTEC Pvt. Ltd. has developed a fundamentally redesigned storage water heater architecture that reduces electricity consumption through selective volume heating, cold water isolation, and gravity-based discharge.
                         </p>
                         <p className="text-xl text-slate-500 leading-relaxed mb-8">
-                            Unlike conventional systems that heat dead volume, our open-loop design ensures zero pressure build-up and complete water turnover. The system is protected by three granted Indian patents and validated for 5-Star efficiency through government laboratory testing.
+                            Unlike conventional systems that heat dead volume, our open-loop design maintains atmospheric pressure and complete water turnover. The system is protected by three granted Indian patents and validated for 5-Star efficiency through government laboratory testing.
                         </p>
                     </motion.div>
 

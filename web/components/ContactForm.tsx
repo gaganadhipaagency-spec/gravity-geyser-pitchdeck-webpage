@@ -7,14 +7,46 @@ import { useState } from "react";
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        organization: "",
+        classification: "",
+        message: ""
+    });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+        setError(null);
+
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error?.message || 'Failed to send inquiry. Please try again.');
+            }
+
+            setIsSubmitted(true);
+        } catch (err: any) {
+            setError(err.message);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     if (isSubmitted) {
@@ -31,6 +63,12 @@ export default function ContactForm() {
                 <p className="text-slate-600 font-mono text-sm uppercase tracking-tight">
                     A TECHNICAL ADVISOR WILL RESPOND WITHIN 24 BUSINESS HOURS.
                 </p>
+                <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="mt-6 text-blue-600 text-xs font-bold uppercase tracking-widest hover:underline"
+                >
+                    Send another inquiry
+                </button>
             </motion.div>
         );
     }
@@ -56,6 +94,9 @@ export default function ContactForm() {
                         <input
                             required
                             type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
                             placeholder="Enter full legal name"
                             className="w-full bg-slate-50 border border-slate-200 px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600 transition-all rounded"
                         />
@@ -67,6 +108,9 @@ export default function ContactForm() {
                         <input
                             required
                             type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             placeholder="name@organization.com"
                             className="w-full bg-slate-50 border border-slate-200 px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600 transition-all rounded"
                         />
@@ -81,6 +125,9 @@ export default function ContactForm() {
                         <input
                             required
                             type="text"
+                            name="organization"
+                            value={formData.organization}
+                            onChange={handleChange}
                             placeholder="Full legal company name"
                             className="w-full bg-slate-50 border border-slate-200 px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600 transition-all rounded"
                         />
@@ -91,6 +138,9 @@ export default function ContactForm() {
                         </label>
                         <select
                             required
+                            name="classification"
+                            value={formData.classification}
+                            onChange={handleChange}
                             className="w-full bg-slate-50 border border-slate-200 px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600 transition-all rounded appearance-none cursor-pointer"
                         >
                             <option value="">Select Inquiry Type</option>
@@ -109,10 +159,17 @@ export default function ContactForm() {
                     <textarea
                         required
                         rows={4}
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         placeholder="Outline specific technical requirements or strategic interests..."
                         className="w-full bg-slate-50 border border-slate-200 px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600 transition-all rounded resize-none"
                     />
                 </div>
+
+                {error && (
+                    <p className="text-red-500 text-xs font-mono">{error}</p>
+                )}
 
                 <button
                     type="submit"
@@ -123,7 +180,7 @@ export default function ContactForm() {
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     ) : (
                         <>
-                            <span className="text-xs uppercase tracking-[0.2em]">Transmit Confidential Inquiry</span>
+                            <span className="text-xs uppercase tracking-[0.2em]">Submit Inquiry</span>
                             <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </>
                     )}

@@ -23,7 +23,7 @@ export default function Footer() {
                         >
                             <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-6">About HG SOL TEC</h2>
                             <p className="text-slate-600 text-lg leading-relaxed max-w-xl mb-8">
-                                Founded in 2017 and headquartered in Mysuru, Karnataka, <span className="text-slate-900 font-bold">HG SOL TEC Pvt. Ltd.</span> focuses on structural innovation in water heating systems with emphasis on energy efficiency, safety, and long-term sustainability.
+                                Founded in 2017 and headquartered in Mysuru, Karnataka, <span className="text-slate-900 font-bold">HG SOL TEC Pvt. Ltd.</span> focuses on structural innovation in water heating systems with emphasis on energy efficiency, safety, hygienic and long-term sustainability.
                             </p>
                             <div className="flex gap-4">
                                 <a href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:border-blue-600 hover:text-blue-600 transition-all text-slate-500 shadow-sm">
@@ -58,8 +58,8 @@ export default function Footer() {
                                     </li>
                                     <li className="flex gap-4 items-center group">
                                         <Mail className="w-5 h-5 text-blue-600 shrink-0" />
-                                        <a href="mailto:contact@gravitygeyser.com" className="text-sm font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
-                                            contact@gravitygeyser.com
+                                        <a href="mailto:info@gravitygeyser.in" className="text-sm font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
+                                            info@gravitygeyser.in
                                         </a>
                                     </li>
                                 </ul>
