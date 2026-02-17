@@ -185,7 +185,7 @@ export default function Hero() {
                             <div className="absolute bottom-6 left-8 right-8 flex justify-between items-end transition-opacity duration-500">
                                 <div className="flex flex-col">
                                     <span className="text-[10px] uppercase tracking-widest text-slate-600">Model</span>
-                                    <span className="text-xs font-mono font-bold text-slate-900">GG-X200-OEM</span>
+                                    <span className="text-xs font-mono font-bold text-slate-900">3202-SEG-20</span>
                                 </div>
                             </div>
                         </div>
