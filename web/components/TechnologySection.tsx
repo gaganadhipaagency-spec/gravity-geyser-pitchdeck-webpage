@@ -187,9 +187,9 @@ export default function TechnologySection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="flex flex-row items-baseline gap-4 border-l-2 border-[#2563EB]/20 pl-4 py-1"
+                                className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 border-l-2 border-[#2563EB]/20 pl-4 py-1"
                             >
-                                <h3 className="text-xl font-bold text-[#0F172A] whitespace-nowrap">The Structural Redesign</h3>
+                                <h3 className="text-xl font-bold text-[#0F172A] md:whitespace-nowrap">The Structural Redesign</h3>
                                 <p className="text-[#64748B] text-sm leading-relaxed">
                                     Comparative analysis of system architecture vs. legacy pressurized models.
                                 </p>
@@ -228,9 +228,9 @@ export default function TechnologySection() {
                                 <div className="py-4 px-4 md:py-5 md:px-8">
                                     <h5 className="text-[10px] md:text-[12px] font-bold text-[#64748B] uppercase tracking-wider">Conventional Pressurized Geyser</h5>
                                 </div>
-                                <div className="py-4 px-4 md:py-5 md:px-8 bg-[#ECF5FF] relative">
+                                <div className="py-4 px-4 md:py-5 md:px-8 bg-[#ECF5FF] relative flex flex-col md:block">
                                     <h5 className="text-[12px] font-bold text-[#2563EB] uppercase tracking-wider">Gravity Geyser</h5>
-                                    <div className="absolute top-0 right-0 bg-[#2563EB] text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-[8px] uppercase tracking-tight">
+                                    <div className="w-fit mt-2 md:mt-0 md:absolute md:top-0 md:right-0 bg-[#2563EB] text-white text-[9px] md:text-[10px] font-bold px-3 py-1 md:py-1.5 rounded-full md:rounded-none md:rounded-bl-[8px] uppercase tracking-tight self-start">
                                         New Standard
                                     </div>
                                 </div>
