@@ -26,7 +26,7 @@ export default function Footer() {
                                 Founded in 2017 and headquartered in Mysuru, Karnataka, <span className="text-slate-900 font-bold">HG SOL TEC Pvt. Ltd.</span> focuses on structural innovation in water heating systems with emphasis on energy efficiency, safety, hygienic and long-term sustainability.
                             </p>
                             <div className="flex gap-4">
-                                <a href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:border-blue-600 hover:text-blue-600 transition-all text-slate-500 shadow-sm">
+                                <a href="https://www.linkedin.com/in/gravitygeysers" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:border-blue-600 hover:text-blue-600 transition-all text-slate-500 shadow-sm">
                                     <Linkedin className="w-5 h-5" />
                                 </a>
                             </div>

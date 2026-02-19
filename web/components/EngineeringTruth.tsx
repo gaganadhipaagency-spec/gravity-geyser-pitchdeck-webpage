@@ -8,7 +8,7 @@ const features = [
         icon: Shield,
         value: "0%",
         label: "PRESSURE RISK",
-        title: "Non-Pressurized Architecture",
+        title: "Equated-Pressurized Architecture",
         description: "Eliminates catastrophic tank failure risks by operating at atmospheric pressure. The open-loop design requires no pressure relief valves, significantly reducing component fatigue and maintenance overhead.",
         footerLabel: "Failure Rate:",
         footerValue: "< 0.001%"
@@ -17,7 +17,7 @@ const features = [
         icon: Droplet,
         value: "100%",
         label: "HYGIENE SCORE",
-        title: "Total Discharge System",
+        title: "Gravity Discharge Outlet",
         description: "Gravity-fed outlet ensures complete water turnover with every cycle. Unlike pressurized tanks that retain dead volume, this architecture prevents sediment accumulation and bacterial breeding.",
         footerLabel: "Sediment Build-up:",
         footerValue: "ZERO"

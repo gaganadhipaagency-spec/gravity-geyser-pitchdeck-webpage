@@ -80,7 +80,7 @@ export default function ContactForm() {
             viewport={{ once: true }}
             className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm"
         >
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Technical Inquiry</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Inquiry</h3>
             <p className="text-slate-500 text-sm mb-8">
                 Access technical briefs, licensing terms, and validation data.
             </p>

@@ -58,7 +58,7 @@ const features = [
     },
     {
         title: "Cold Water Isolation",
-        description: "Vertical separation ensures fresh inlet water never mixes with the active heating zone.",
+        description: "Isoloation ensures cold inlet water never mixes with the heated water.",
         footer: "Hydro-Dynamic Separation",
         icon: Droplets,
         renderDiagram: () => (
@@ -128,7 +128,7 @@ export default function TechnologySection() {
         {
             label: "DISCHARGE MECHANISM",
             conventional: "Pressure Displacement",
-            gravity: "Gravity Feed",
+            gravity: "Gravity Based",
         },
         {
             label: "DEAD VOLUME",
@@ -226,7 +226,7 @@ export default function TechnologySection() {
                             {/* Header Row */}
                             <div className="grid grid-cols-2 border-b border-slate-200">
                                 <div className="py-4 px-4 md:py-5 md:px-8">
-                                    <h5 className="text-[10px] md:text-[12px] font-bold text-[#64748B] uppercase tracking-wider">Conventional Pressurized</h5>
+                                    <h5 className="text-[10px] md:text-[12px] font-bold text-[#64748B] uppercase tracking-wider">Conventional Pressurized Geyser</h5>
                                 </div>
                                 <div className="py-4 px-4 md:py-5 md:px-8 bg-[#ECF5FF] relative">
                                     <h5 className="text-[12px] font-bold text-[#2563EB] uppercase tracking-wider">Gravity Geyser</h5>

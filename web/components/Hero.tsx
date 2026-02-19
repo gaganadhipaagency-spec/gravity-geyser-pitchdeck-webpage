@@ -73,10 +73,10 @@ export default function Hero() {
                                 Request OEM Licensing
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-medium rounded-lg border border-slate-200 hover:bg-slate-50 transition-all duration-300 group">
-                                <TrendingUp className="mr-2 w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-50 text-blue-700 font-semibold rounded-lg border border-blue-100 hover:bg-blue-100 transition-all duration-300 group">
+                                <TrendingUp className="mr-2 w-5 h-5 text-blue-500 group-hover:text-blue-600 transition-colors" />
                                 Investment Opportunity
-                                <ArrowRight className="ml-2 w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                                <ArrowRight className="ml-2 w-5 h-5 text-blue-500 group-hover:translate-x-1 transition-all" />
                             </a>
                         </div>
                     </motion.div>
