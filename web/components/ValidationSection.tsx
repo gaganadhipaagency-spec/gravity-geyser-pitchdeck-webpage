@@ -105,7 +105,7 @@ export default function ValidationSection() {
                                 </h3>
 
                                 <p className="text-blue-100/70 max-w-sm text-sm leading-relaxed mb-6">
-                                    A controlled 12-month comparative audit conducted within a multi-specialty hospital environment.
+                                    A controlled 1 month comparative audit conducted within a multi-specialty hospital environment.
                                 </p>
                             </div>
 
