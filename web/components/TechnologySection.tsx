@@ -58,7 +58,7 @@ const features = [
     },
     {
         title: "Cold Water Isolation",
-        description: "Isoloation ensures cold inlet water never mixes with the heated water.",
+        description: "Isolation ensures cold inlet water never mixes with the heated water.",
         footer: "Hydro-Dynamic Separation",
         icon: Droplets,
         renderDiagram: () => (
